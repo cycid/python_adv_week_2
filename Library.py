@@ -23,7 +23,7 @@ class Library:
 
 
 
-    def give_book(self, book, reader):
+    def give_book_to_reader(self, book, reader):
 
         """
         the function change the status lib to status with reader
@@ -35,20 +35,20 @@ class Library:
         book_index=self.list_of_books.index(book)
         if self.list_of_books[book_index].status=="lib":
             self.list_of_books[book_index].status=reader
-            return f'the book was given'
+            return print(f'the book was given')
         else:
-            return f'some one already took this book'
+            return print(f'some one already took this book')
 
 
 
-    def get_book(self,book):
+    def get_book_from_reader(self,book):
         """
         the func return book from any reader who had it
 
         """
         book_index=self.list_of_books.index(book)
         self.list_of_books[book_index].status="lib"
-        return f'the book come back to library'
+        return print(f'the book come back to library')
 
     def print_books(self,param):
         """the function return books in library depends on parameter
@@ -58,19 +58,20 @@ class Library:
         """
         if param=="all":
             for item in self.list_of_books:
-                print(f'{item.name} - {item.author} published in {item.year}')
-        #iterating all list of books and if book is in library - print it
+                print(item)
+
+                #iterating all list of books and if book is in library - print it
         elif param=="in":
             for item in self.list_of_books:
                 if item.status=="lib":
-                    print(f'{item.name} - {item.author} published in {item.year} in library')
+                    print(item)
                 else:pass
         else:
             for item in self.list_of_books:
                 if item.status!="lib":
-                    print(f'{item.name} - {item.author} published in {item.year} was given to reader')
+                    print(item)
                 else:pass
-        return f'all the list was printed'
+
 
 
     def sort(self,param):
@@ -90,3 +91,10 @@ class Library:
             raise Exception("Sorry, keyword wasnt correct")
         return print("all the books in our library")
 
+    def show_user_book(self,user):
+        print(f"{user} have such books:")
+        for item in self.list_of_books:
+            if item.status==user:
+                print(item)
+            else:
+                pass
