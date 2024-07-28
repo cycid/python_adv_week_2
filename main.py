@@ -1,37 +1,37 @@
 """
 task:
-Библиотека
+Library
 
-Создать три класса:
-1. Класс библиотека
-Поля:
-- список книг (list Books)
-- список читателей (list Readers)
+Create three classes:
+1. Library class
+Fields:
+- list of books (list Books)
+- list of readers (list Readers)
 
-Методы:
-- Добавить книгу
-- Удалить книгу
-- Отдать книгу читателю
-- Принять книгу от читателя
+Methods:
+- Add book
+- Delete book
+- Give book to reader
+- Accept book from reader
 
-- Вывести список всех книг
-- Вывести список книг в библиотеке (в наличии)
-- Вывести списк книг, которые не в наличии
+- List all books
+- List books in library (in stock)
+- List books that are out of stock
 
-- Отсортировать список книг по названию, автору, году издания (lambda будет плюсом)
+- Sort list of books by title, author, year of publication (lambda will be a plus)
 
-2. Класс книга
-Поля:
+2. Book class
+Fields:
 - ID
-- Название
-- Автор
-- Год издания
-- ??? (этот параметр нужен!!!)
+- Title
+- Author
+- Year of publication
+- ??? (this parameter is needed!!!)
 
-3. Класс читателя
+3. Reader class
 - ???
 
-Методы:
+Methods:
 ???
 """
 
